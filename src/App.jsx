@@ -10,7 +10,7 @@ import { ArrowUpRight, Bluetooth } from 'lucide-react';
 import { BlurFade } from './components/ui/blur-fade';
 import { AnimatedList } from './components/ui/animated-list';
 import { Mail } from 'lucide-react';
-import  LinkedIn  from './assets/LinkedIn.svg';
+import  LinkedIn  from './assets/linkedin.svg';
 import GitHub from './assets/github.svg';
 import LeetCode from './assets/leetcode.svg';
 import CodeChef from './assets/codechef.svg';
