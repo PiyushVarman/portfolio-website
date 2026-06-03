@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root{
+  background-color: black;
+  overflow: hidden auto ;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+div{
+}
