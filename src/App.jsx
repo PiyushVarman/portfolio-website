@@ -88,7 +88,7 @@ function App() {
           <div className='w-screen flex flex-col items-center xl:w-1/2'>
             <motion.div initial={{opacity:0.5}} animate={{opacity:1}} transition={{duration:1 }}className='relative xl:h-[50vw] xl:h-[50vw] aspect-square overflow-clip xl:rounded-4xl'>
               <img src={photo} className="w-full h-full hover:scale-130 bg-clip-content object-cover hover:rotate-5 transition duration-375"/>
-              <div class="absolute opacity-50 inset-0 xl:opacity-0 bg-radial from-transparent to-black/50"></div>
+              <div className="absolute opacity-50 inset-0 xl:opacity-0 bg-radial from-transparent to-black/50"></div>
             </motion.div>
           </div>
         </div>
@@ -115,7 +115,7 @@ function App() {
             <div className="inset-0 flex items-center justify-center ">
             <BlurFade inView={true} delay={0.1} inViewMargin='-10px' blur="100px">
             <CardContainer container ClassName="rounded-xl py-0 outline outline-red-500 bg-white ">
-              <CardBody className="relative h-auto w-auto rounded-xl bg-card p-6 shadow-xs shadow-white/10 outline outline-white/20 bg-gray-900/20 hover:shadow-xl">
+              <CardBody className="relative h-auto w-auto scale-95 xl:scale-100 rounded-xl bg-card p-6 shadow-xs shadow-white/10 outline outline-white/20 bg-gray-900/20 hover:shadow-xl">
                 <CardItem translateZ={150} className="mt-4 w-full">
                   <video
                     src={os}
@@ -146,7 +146,7 @@ function App() {
             <div className="inset-0 flex items-center justify-center">
             <BlurFade inView={true} delay={0.2} inViewMargin='-10px' blur="100px">
             <CardContainer containerClassName="rounded-xl py-0">
-              <CardBody className="relative h-auto w-auto rounded-xl outline shadow-xs shadow-white/10 outline-white/20 bg-gray-900/20bg-card p-6 hover:shadow-xl">
+              <CardBody className="relative h-auto w-auto scale-95 xl:scale-100 rounded-xl outline shadow-xs shadow-white/10 outline-white/20 bg-gray-900/20bg-card p-6 hover:shadow-xl">
                 <CardItem translateZ={50} className="text-xl font-bold italic">
                   LexiNote
                 </CardItem>
@@ -177,7 +177,7 @@ function App() {
             <div className="inset-0 flex items-center justify-center">
             <BlurFade inView={true} delay={0.3} inViewMargin='-10px' blur="100px">                
             <CardContainer containerClassName="rounded-xl py-0">
-              <CardBody className="relative h-auto w-auto rounded-xl outline shadow-xs shadow-white/10 outline-white/20 bg-gray-900/20bg-card p-6 hover:shadow-xl">
+              <CardBody className="relative h-auto w-auto scale-95 xl:scale-100 rounded-xl outline shadow-xs shadow-white/10 outline-white/20 bg-gray-900/20bg-card p-6 hover:shadow-xl">
                 <CardItem translateZ={100} className="mt-4 w-full">
                   <video
                     src={sentimentanalyzer}
@@ -208,7 +208,7 @@ function App() {
             <div className="inset-0 flex items-center justify-center">
             <BlurFade inView={true} delay={0.4} inViewMargin='-10px' blur="100px">
             <CardContainer containerClassName="rounded-xl py-0">
-              <CardBody className="relative h-auto w-auto rounded-xl outline shadow-xs shadow-white/10 outline-white/20 bg-gray-900/20bg-card p-6 hover:shadow-xl">
+              <CardBody className="relative h-auto w-auto scale-95 xl:scale-100 rounded-xl outline shadow-xs shadow-white/10 outline-white/20 bg-gray-900/20bg-card p-6 hover:shadow-xl">
                 <CardItem translateZ={50} className="text-xl font-bold italic">
                   Formula 1 Regulations Expert
                 </CardItem>
@@ -306,21 +306,21 @@ function App() {
 
         {/* Educational Qualifications */}
         <section className='backdrop-blur-sm mt-10! h-100 '>
-          <h1 className="p-5 text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full backdrop-blur hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101">Educational Qualifications</h1>
-          <div className="p-10 flex flex-col xl:flex-row  items-center gap-x-10 justify-center  font-bold *:backdrop-blur-sm *:relative *:overflow-hidden *:hover:bg-black/20 *:text-2xl *:rounded-4xl *:w-[75vw] *:h-[25vh] *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20">
+          <h1 className="p-5 text-3xl xl:text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full backdrop-blur hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101">Educational Qualifications</h1>
+          <div className="p-10 flex flex-col xl:flex-row  gap-y-10 items-center gap-x-10 justify-center  font-bold *:backdrop-blur-sm *:relative *:overflow-hidden *:hover:bg-black/20 *:text-2xl *:rounded-4xl *:w-[75vw] *:h-[25vh] *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20">
             <div className='transition-all *:gap-x-0! duration-300 ease-in-out *:hover:gap-x-3!'>
-              <div className=" columns-2 mx-10 duration-200 hover:gap-x-2">
+              <div className="columns-2 mx-10 duration-200 hover:gap-x-2">
                 <p>B.Tech CSE (AI/ML)<br/>VIT Chennai</p>
                 <p className='text-right'>8.80 CGPA<br/>2024-2028</p>
+                <BorderBeam size={100} duration={1000} colorFrom='white' colorTo="white" transition={{type: "spring",stiffness: 60, damping: 100}}/>
               </div>
-              <BorderBeam size={100} duration={1000} colorFrom='white' colorTo="white" transition={{type: "spring",stiffness: 60, damping: 100}}/>
             </div>
             <div className='hover:text-3xl transition-all  duration-300 ease-in-out'>
               <p>Class 12<br/>DAV Chennai</p>
               <p className="text-right">93.6%<br/>2024</p>
               <BorderBeam size={100} duration={1000} colorFrom='white' colorTo="white" transition={{type: "spring",stiffness: 60, damping: 100}}/>
             </div>
-            <div className='relative overflow-hidden outline outline-white/20 hover:text-3xl transition-all duration-300 ease-in-out'>
+            <div className=' hover:text-3xl transition-all duration-300 ease-in-out'>
               <p>Class 10<br/>DAV Chennai</p>
               <p className='text-right'>95.6%<br/>2022</p>
               <BorderBeam size={100} duration={1000} colorFrom='white' colorTo="white" transition={{type: "spring",stiffness: 60, damping: 100}}/>
@@ -328,14 +328,14 @@ function App() {
           </div>
         </section>
 
-        <section className=' mt-10! h-max p-10  '>
-          <h1 className="p-5 text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101 animate-pulse ">Contact Me!</h1>
-          <div className="*:p-2 flex flex-col items-center align-middle gap-y-10 justify-center  font-bold *:backdrop-blur-sm  *:hover:bg-black/20 *:text-2xl *:rounded-xl *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20 *:duration-500">
+        <section className='mt-[70vh]!'>
+          <h1 className="p-5 text-3xl xl:text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101 animate-pulse ">Contact Me!</h1>
+          <div className="*:p-2 flex flex-col items-center align-middle gap-y-10 justify-center  font-bold *:backdrop-blur-sm  *:hover:bg-black/20 *:text-lg *:xl:text-2xl *:rounded-xl *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20 *:duration-500">
             <div>
-              <Mail className="w-10! h-10!"/><a href="">piyushvarman</a>
+              <Mail className="w-7 h-7 xl:w-10! xl:h-10!"/><a href="">piyushvarman</a>
             </div>
             <div>
-              <img src={LinkedIn} className='w-10 h-10'/>Piyush Varman's LinkedIn
+              <img src={LinkedIn} className='w-7 h-7 xl:w-10 xl:h-10'/>Piyush Varman's LinkedIn
             </div>
           </div>
         </section>
