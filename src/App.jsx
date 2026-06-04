@@ -68,21 +68,21 @@ function App() {
   return (
     <> 
       <motion.div className='fixed z-[-1]  h-screen w-screen' initial={{scale:1,opacity:0}} animate={{scale:1,opacity:1}} transition={{duration: 1}}>
-        <RetroGrid className='z-[-1] fixed top-0 w-screen h-screen' opacity={0.4} angle={10}/>
+        <RetroGrid className='z-[-1] fixed xl:scale-100 scale-110 top-0 w-screen h-screen' opacity={0.4} angle={10}/>
       </motion.div>
-      <div className={`flex gap-x-2 xl:gap-x-10 items-center justify-center fixed top-0 left-0 w-full h-20 shadow-md rounded-xl z-2 bg-transparent text-2xl *:hover:scale-150 *:duration-200 backdrop-blur-lg hover:backdrop-blur-2xl hover:bg-white/15 hover:h-40 transition-all duration-250 ease-in-out ${scrolled ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
-        <a href="https://www.linkedin.com/in/piyush-varman" target="_blank"><img src={LinkedIn} className='w-8 rounded duration-200 hover:shadow-xs hover:shadow-white'/></a>
-        <a href="https://github.com/piyushvarman" target="_blank"><img src={GitHub} className='w-9 rounded-3xl duration-200 hover:shadow-xs hover:shadow-white'/></a>
-        <p className="p-5 text-white text-5xl font-bold  hover:text-shadow-white hover:text-amber-400 transition-all duration-500">PCV</p>
-        <a href="https://www.codechef.com/users/piyushvarman"target="_blank"><img src={CodeChef} className='w-10'/></a>
-        <a href="https://leetcode.com/u/pcv232/" target="_blank"><img src={LeetCode} className='w-8 stroke-red-500 fill-red-500'/></a>
+      <div className={`flex gap-x-4 xl:gap-x-10 items-center justify-center fixed top-0 left-0 w-full h-20 shadow-md rounded-xl z-2 bg-transparent text-2xl *:hover:scale-150 *:duration-200 backdrop-blur-lg hover:backdrop-blur-2xl hover:bg-white/15 hover:h-40 transition-all duration-250 ease-in-out ${scrolled ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+        <a href="https://www.linkedin.com/in/piyush-varman" target="_blank"><img src={LinkedIn} className='w-6 xl:w-8 rounded duration-200 hover:shadow-xs hover:shadow-white'/></a>
+        <a href="https://github.com/piyushvarman" target="_blank"><img src={GitHub} className='w-6 xl:w-9 rounded-3xl duration-200 hover:shadow-xs hover:shadow-white'/></a>
+        <p className="p-5 text-white text-3xl xl:text-5xl font-bold  hover:text-shadow-white hover:text-amber-400 transition-all duration-500">PCV</p>
+        <a href="https://www.codechef.com/users/piyushvarman"target="_blank"><img src={CodeChef} className='w-6 xl:w-10'/></a>
+        <a href="https://leetcode.com/u/pcv232/" target="_blank"><img src={LeetCode} className='w-6 xl:w-8 stroke-red-500 fill-red-500'/></a>
       <ScrollProgress className="absolute bottom-0 h-[0.3vh]"/>
       </div>
 
       <main className='pt-0'>
         <div className="flex flex-col-reverse xl:flex-row items-center letter-spacing justify-center xl:left-0 xl:bg-right xl:min-h-screen">
           <div className="w-full flex flex-col items-center gap-4">
-            <TypingAnimation words={['Piyush','Varman','Piyush Varman']} cursorStyle="underscore" blinkCursor={true} className="z-1 text-center backdrop-blur outline px-10 text-5xl xl:text-8xl tracking-tighter hover:scale-110 hover:text-amber-200 hover:px-1 hover:rounded-xs transition-all duration-500">Piyush Varman</TypingAnimation>
+            <TypingAnimation words={['Piyush','Varman','Piyush Varman']} cursorStyle="underscore" blinkCursor={true} className="z-1 overflow-hidden text-center backdrop-blur outline px-10 text-5xl xl:text-8xl tracking-tighter hover:scale-110 hover:text-amber-200 hover:px-1 hover:rounded-xs transition-all duration-500">Piyush Varman</TypingAnimation>
             <p className="gap-4 italic xl:text-2xl">Sophomore at VIT Chennai</p>
           </div>
           <div className='w-screen flex flex-col items-center xl:w-1/2'>
