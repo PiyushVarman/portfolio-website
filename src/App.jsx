@@ -14,12 +14,38 @@ import  LinkedIn  from './assets/linkedin.svg';
 import GitHub from './assets/github.svg';
 import LeetCode from './assets/leetcode.svg';
 import CodeChef from './assets/codechef.svg';
-import './App.css'
 import photo from './assets/Photo.jpg';
+import python from './assets/logos/python.svg';
+import c from './assets/logos/c.svg';
+import cpp from './assets/logos/cplusplus.svg';
+import java from './assets/logos/Java.svg';
+import langchain from './assets/logos/LangChain.svg';
+import gemini from './assets/logos/gemini.svg';
+import meta from './assets/logos/meta.svg';
+import html from './assets/logos/html5.svg';
+import css from './assets/logos/css.svg';
+import javascript from './assets/logos/javascript.svg';
+import typescript from './assets/logos/typescript.svg';
+import expressjs from './assets/logos/express.svg';
+import nodejs from './assets/logos/nodedotjs.svg';
+import mongodb from './assets/logos/mongodb.svg';
+import mysql from './assets/logos/mysql.svg';
+import reactjs from './assets/logos/react.svg';
+import nextjs from './assets/logos/nextdotjs.svg';
+import fastapi from './assets/logos/fastapi.svg';
+import tailwindcss from './assets/logos/tailwindcss.svg';
+import bootstrap from './assets/logos/bootstrap.svg';
+import git from './assets/logos/git.svg';
+import github from './assets/logos/github.svg';
+import vscode from './assets/logos/vscode.svg';
+import vite from './assets/logos/vite.svg';
+import figma from './assets/logos/figma.svg';
+
 import os from './assets/os.mp4';
 import lexinote from './assets/lexinote.mp4';
 import f1regexpert from './assets/f1regexpert.mp4';
 import sentimentanalyzer from './assets/sentimentanalyzer.mp4';
+import './App.css'
 function App() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -219,18 +245,18 @@ function App() {
               <div className='text-center'> 
                 <h2 className='text-3xl'>Programming Languages</h2>
                 <div className='flex flex-wrap justify-center gap-x-10 list-disc p-10 *:min-w-10! text-center *:flex *:flex-col *:items-center *:hover:scale-110 *:duration-100'>
-                  <img src="/src/assets/logos/python.svg" title="Python" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/c.svg" title="C" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/cplusplus.svg" title="C++" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/java.svg" title="Java" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={python} title="Python" className='invert brightness-100 background-none h-10 w-10'/>
+                  <img src={c} title="C" className='invert brightness-100 background-none h-10 w-10'/>
+                  <img src={cpp} title="C++" className='invert brightness-100 background-none h-10 w-10'/>
+                  <img src={java} title="Java" className='brightness-0 invert background-none h-10 w-10'/>
                 </div>
                 <hr className='w-[70vw] opacity-20'/>
                 <br/>
                 <h2 className='text-3xl'>AI</h2>
                 <div className='flex flex-wrap justify-center gap-x-10 list-disc p-10 *:min-w-10! text-center *:flex *:flex-col *:items-center *:hover:scale-110 *:duration-100'>
-                  <img src="/src/assets/logos/langchain.svg" title="LangChain" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/gemini.svg" title="Google Gemini" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/meta.svg" title="Facebook AI Similarity Search (FAISS)" className='invert brightness-100 background-none h-10 w-10'/>
+                  <img src={langchain} title="LangChain" className='invert brightness-100 background-none h-10 w-10'/>
+                  <img src={gemini} title="Google Gemini" className='invert brightness-100 background-none h-10 w-10'/>
+                  <img src={meta} title="Facebook AI Similarity Search (FAISS)" className='invert brightness-100 background-none h-10 w-10'/>
                 </div>
                 <hr className='w-[70vw] opacity-20'/>
                 <br/>
@@ -238,38 +264,38 @@ function App() {
                 <br/>
                 <h3>Frontend Technologies</h3>
                 <div className='flex flex-wrap gap-x-10 justify-center items-center  pt-2 gap-y-2  *:hover:scale-110 *:transition *:duration-100 *:flex *:flex-col *:items-center'>
-                  <img src="/src/assets/logos/html5.svg" title="HTML" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/css.svg" title="CSS" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/javascript.svg" title="JavaScript" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/typescript.svg" title="TypeScript" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={html} title="HTML" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={css} title="CSS" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={javascript} title="JavaScript" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={typescript} title="TypeScript" className='brightness-0 invert background-none h-10 w-10'/>
                 </div>
                 <br/>
                 <h3>Backend and Database Technologies</h3>
                 <div className='flex flex-wrap gap-x-10 justify-center items-center  pt-2 gap-y-2  *:hover:scale-110 *:transition *:duration-100'>
-                  <img src="/src/assets/logos/express.svg" title="express.js" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/nodedotjs.svg" title="node.js" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/mongodb.svg" title="MongoDB" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/mysql.svg" title="mySQL" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={expressjs} title="express.js" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={nodejs} title="node.js" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={mongodb} title="MongoDB" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={mysql} title="mySQL" className='brightness-0 invert background-none h-10 w-10'/>
                 </div>
                 <br/>
                 <h3>Frameworks and Libraries</h3>
                 <div className='flex flex-wrap gap-x-10 justify-center items-center  pt-2 gap-y-2 *:hover:scale-110 *:transition *:duration-100 '>
-                  <img src="/src/assets/logos/react.svg" title="React" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/nextdotjs.svg" title="Next.js" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/fastapi.svg" title="FastAPI" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/tailwindcss.svg" title="Tailwind CSS"  className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/bootstrap.svg" title="Bootstrap" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={reactjs} title="React" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={nextjs} title="Next.js" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={fastapi} title="FastAPI" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={tailwindcss} title="Tailwind CSS"  className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={bootstrap} title="Bootstrap" className='brightness-0 invert background-none h-10 w-10'/>
                 </div>
                 <br/>
                 <hr className='w-[70vw] opacity-20'/>
                 <br/>
                 <h2 className='text-3xl'>Developer Tools</h2>
                 <div className='flex flex-wrap gap-x-10 justify-center items-center  pt-2 gap-y-2 *:hover:scale-110 *:transition *:duration-100 '>
-                  <img src="/src/assets/logos/git.svg" title="Git" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/github.svg" title="GitHub"className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/vscode.svg" title="Visual Studio Code" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/vite.svg" title="Vite" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src="/src/assets/logos/figma.svg" title="Figma" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={git} title="Git" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={github} title="GitHub"className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={vscode} title="Visual Studio Code" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={vite} title="Vite" className='brightness-0 invert background-none h-10 w-10'/>
+                  <img src={figma} title="Figma" className='brightness-0 invert background-none h-10 w-10'/>
                 </div>
               </div>
             <BorderBeam reverse size={140} duration={1000} colorFrom='white' colorTo="white" transition={{type: "spring",stiffness: 60, damping: 100}}/>                  
