@@ -82,7 +82,7 @@ function App() {
       <main className='pt-0'>
         <div className="flex flex-col-reverse xl:flex-row items-center letter-spacing justify-center xl:left-0 xl:bg-right xl:min-h-screen">
           <div className="w-full flex flex-col items-center gap-4">
-            <TypingAnimation words={['Piyush','Varman','Piyush Varman']} cursorStyle="underscore" blinkCursor={true} className="z-1 backdrop-blur outline px-10 text-5xl xl:text-8xl tracking-tighter hover:scale-110 hover:text-amber-200 hover:px-1 hover:rounded-xs transition-all duration-500">Piyush Varman</TypingAnimation>
+            <TypingAnimation words={['Piyush','Varman','Piyush Varman']} cursorStyle="underscore" blinkCursor={true} className="z-1 text-center backdrop-blur outline px-10 text-5xl xl:text-8xl tracking-tighter hover:scale-110 hover:text-amber-200 hover:px-1 hover:rounded-xs transition-all duration-500">Piyush Varman</TypingAnimation>
             <p className="gap-4 italic xl:text-2xl">Sophomore at VIT Chennai</p>
           </div>
           <div className='w-screen flex flex-col items-center xl:w-1/2'>
