@@ -70,7 +70,7 @@ function App() {
       <motion.div className='fixed z-[-1]  h-screen w-screen' initial={{scale:1,opacity:0}} animate={{scale:1,opacity:1}} transition={{duration: 1}}>
         <RetroGrid className='z-[-1] fixed top-0 w-screen h-screen' opacity={0.4} angle={10}/>
       </motion.div>
-      <div className={`flex gap-x-2 xl:gap-x-10 items-center justify-center fixed top-0 left-0 w-full h-20 shadow-md rounded-xl z-1 bg-transparent text-2xl *:hover:scale-150 *:duration-200 backdrop-blur-lg hover:backdrop-blur-2xl hover:bg-white/15 hover:h-40 transition-all duration-250 ease-in-out ${scrolled ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+      <div className={`flex gap-x-2 xl:gap-x-10 items-center justify-center fixed top-0 left-0 w-full h-20 shadow-md rounded-xl z-2 bg-transparent text-2xl *:hover:scale-150 *:duration-200 backdrop-blur-lg hover:backdrop-blur-2xl hover:bg-white/15 hover:h-40 transition-all duration-250 ease-in-out ${scrolled ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
         <a href="https://www.linkedin.com/in/piyush-varman" target="_blank"><img src={LinkedIn} className='w-8 rounded duration-200 hover:shadow-xs hover:shadow-white'/></a>
         <a href="https://github.com/piyushvarman" target="_blank"><img src={GitHub} className='w-9 rounded-3xl duration-200 hover:shadow-xs hover:shadow-white'/></a>
         <p className="p-5 text-white text-5xl font-bold  hover:text-shadow-white hover:text-amber-400 transition-all duration-500">PCV</p>
