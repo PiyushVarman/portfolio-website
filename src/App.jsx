@@ -328,7 +328,7 @@ function App() {
           </div>
         </section>
 
-        <section className='mt-[70vh]!'>
+        <section className='mt-[70vh]! xl:mt-0!'>
           <h1 className="p-5 text-3xl xl:text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101 animate-pulse ">Contact Me!</h1>
           <div className="*:p-2 flex flex-col items-center align-middle gap-y-10 justify-center  font-bold *:backdrop-blur-sm  *:hover:bg-black/20 *:text-lg *:xl:text-2xl *:rounded-xl *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20 *:duration-500">
             <div>
