@@ -70,7 +70,7 @@ function App() {
       <motion.div className='fixed z-[-1]  h-screen w-screen' initial={{scale:1,opacity:0}} animate={{scale:1,opacity:1}} transition={{duration: 1}}>
         <RetroGrid className='z-[-1] fixed top-0 w-screen h-screen' opacity={0.4} angle={10}/>
       </motion.div>
-      <div className={`flex gap-x-10 items-center justify-center fixed top-0 left-0 w-full h-20 shadow-md rounded-xl z-1 bg-transparent text-2xl *:hover:scale-150 *:duration-200 backdrop-blur-lg hover:backdrop-blur-2xl hover:bg-white/15 hover:h-40 transition-all duration-250 ease-in-out ${scrolled ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+      <div className={`flex gap-x-2 xl:gap-x-10 items-center justify-center fixed top-0 left-0 w-full h-20 shadow-md rounded-xl z-1 bg-transparent text-2xl *:hover:scale-150 *:duration-200 backdrop-blur-lg hover:backdrop-blur-2xl hover:bg-white/15 hover:h-40 transition-all duration-250 ease-in-out ${scrolled ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
         <a href="https://www.linkedin.com/in/piyush-varman" target="_blank"><img src={LinkedIn} className='w-8 rounded duration-200 hover:shadow-xs hover:shadow-white'/></a>
         <a href="https://github.com/piyushvarman" target="_blank"><img src={GitHub} className='w-9 rounded-3xl duration-200 hover:shadow-xs hover:shadow-white'/></a>
         <p className="p-5 text-white text-5xl font-bold  hover:text-shadow-white hover:text-amber-400 transition-all duration-500">PCV</p>
@@ -80,21 +80,22 @@ function App() {
       </div>
 
       <main className='pt-0'>
-        <div className="flex items-center letter-spacing justify-center left-0 bg-right min-h-screen">
+        <div className="flex flex-col-reverse xl:flex-row items-center letter-spacing justify-center xl:left-0 xl:bg-right xl:min-h-screen">
           <div className="w-full flex flex-col items-center gap-4">
-            <TypingAnimation words={['Piyush','Varman','Piyush Varman']} cursorStyle="underscore" blinkCursor={true} className="backdrop-blur outline pl-10 pr-10 text-8xl tracking-tighter hover:scale-110 hover:text-amber-200 hover:pl-1 hover:pr-1 hover:rounded-xs transition-all duration-500 motion-preset-typewriter">Piyush Varman</TypingAnimation>
-            <p className="gap-4 italic text-2xl">Sophomore at VIT Chennai</p>
+            <TypingAnimation words={['Piyush','Varman','Piyush Varman']} cursorStyle="underscore" blinkCursor={true} className="z-1 backdrop-blur outline px-10 text-5xl xl:text-8xl tracking-tighter hover:scale-110 hover:text-amber-200 hover:px-1 hover:rounded-xs transition-all duration-500">Piyush Varman</TypingAnimation>
+            <p className="gap-4 italic xl:text-2xl">Sophomore at VIT Chennai</p>
           </div>
-          <div className='w-1/2 flex justify-end'>
-            <motion.div initial={{opacity:0.5}} animate={{opacity:1}} transition={{duration:1 }}className='w-[50vw] h-[50vw] aspect-square overflow-clip rounded-4xl'>
-              <img src={photo} className="w-full h-full object-cover hover:scale-130 bg-clip-content hover:rotate-5 transition duration-375"/>
+          <div className='w-screen flex flex-col items-center xl:w-1/2'>
+            <motion.div initial={{opacity:0.5}} animate={{opacity:1}} transition={{duration:1 }}className='relative xl:h-[50vw] xl:h-[50vw] aspect-square overflow-clip xl:rounded-4xl'>
+              <img src={photo} className="w-full h-full hover:scale-130 bg-clip-content object-cover hover:rotate-5 transition duration-375"/>
+              <div class="absolute opacity-50 inset-0 xl:opacity-0 bg-radial from-transparent to-black/50"></div>
             </motion.div>
           </div>
         </div>
 
         {/* About Me */}
-        <section className="relative bg-black/80 h-[65vh] mt-20! flex flex-col items-center overflow-hidden">
-          <h1 className="p-5 text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101 ">About Me</h1>
+        <section className="relative bg-black/80 h-[70vh] mt-20! flex flex-col items-center overflow-hidden">
+          <h1 className="p-5 text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101 mb-10!">About Me</h1>
           <div className="relative flex flex-col items-center justify-center w-[80vw] h-[30vh]  text-center my-20!">
             <AnimatedList>
             <p className={'leading-6'}>Hi!👋</p>
@@ -109,7 +110,7 @@ function App() {
 
         {/* Projects Section */}
         <section>
-          <h1 className="text-8xl font-bold text-center uppercase tracking-widest text-transparent bg-linear-to-b from-white to-black/50 bg-clip-text my-[10vh]! hover:text-shadow-xs hover:text-shadow-white/50 duration-450 hover:scale-101">Projects</h1>
+          <h1 className="text-5xl xl:text-8xl font-bold text-center uppercase tracking-widest text-transparent bg-linear-to-b from-white to-black/50 bg-clip-text my-[10vh]! hover:text-shadow-xs hover:text-shadow-white/50 duration-450 hover:scale-101">Projects</h1>
           <div className='flex flex-wrap justify-center gap-x-10 gap-y-10'>
             <div className="inset-0 flex items-center justify-center ">
             <BlurFade inView={true} delay={0.1} inViewMargin='-10px' blur="100px">
@@ -239,47 +240,47 @@ function App() {
 
         {/* Skills Section */}
         <BlurFade inView={true} delay={0.4} inViewMargin='10px' blur="100px">
-          <section className="mt-20! bg-black/40 h-[160vh] flex flex-col items-center">
+          <section className="mt-20! bg-black/40 p-10 xl:h-[160vh] flex flex-col items-center">
             <h1 className='p-5 text-5xl font-bold text-center  text-transparent bg-linear-to-b  from-white to-black bg-clip-text mt-[10vh]  hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101'>Skills</h1>
-            <div className="mt-17.5! relative overflow-hidden flex flex-col gap-y-20 items-center backdrop-blur outline outline-white/20 h-max w-[80vw] p-10  rounded-xl hover:scale-110 duration-500 hover:shadow-xl hover:shadow-white/10">
+            <div className="xl:mt-15.5! relative overflow-hidden flex flex-col gap-y-20 items-center backdrop-blur outline outline-white/20 h-max w-[80vw] p-10  rounded-xl hover:scale-110 duration-500 hover:shadow-xl hover:shadow-white/10">
               <div className='text-center'> 
-                <h2 className='text-3xl'>Programming Languages</h2>
-                <div className='flex flex-wrap justify-center gap-x-10 list-disc p-10 *:min-w-10! text-center *:flex *:flex-col *:items-center *:hover:scale-110 *:duration-100'>
-                  <img src={python} title="Python" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src={c} title="C" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src={cpp} title="C++" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src={java} title="Java" className='brightness-0 invert background-none h-10 w-10'/>
+                <h2 className='text-2xl xl:text-3xl'>Programming Languages</h2>
+                <div className='flex flex-wrap justify-center gap-x-3 xl:gap-x-10 list-disc p-10 *:min-w-10! text-center *:flex *:flex-col *:items-center *:hover:scale-110 *:duration-100 *:h-7 *:w-7 *:xl:w-10 *:xl:h-10'>
+                  <img src={python} title="Python" className='invert brightness-100 background-none'/>
+                  <img src={c} title="C" className='invert brightness-100 background-none'/>
+                  <img src={cpp} title="C++" className='invert brightness-100 background-none'/>
+                  <img src={java} title="Java" className='brightness-0 invert background-none'/>
                 </div>
                 <hr className='w-[70vw] opacity-20'/>
                 <br/>
-                <h2 className='text-3xl'>AI</h2>
-                <div className='flex flex-wrap justify-center gap-x-10 list-disc p-10 *:min-w-10! text-center *:flex *:flex-col *:items-center *:hover:scale-110 *:duration-100'>
-                  <img src={langchain} title="LangChain" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src={gemini} title="Google Gemini" className='invert brightness-100 background-none h-10 w-10'/>
-                  <img src={meta} title="Facebook AI Similarity Search (FAISS)" className='invert brightness-100 background-none h-10 w-10'/>
+                <h2 className='text-2xl xl:text-3xl mb-0!'>AI</h2>
+                <div className='flex flex-wrap justify-center  gap-x-3 xl:gap-x-10 list-disc p-10 *:min-w-10! text-center *:flex *:flex-col *:items-center *:hover:scale-110 *:duration-100 *:h-7 *:w-7 *:xl:h-10 *:xl:w-10'>
+                  <img src={langchain} title="LangChain" className='invert brightness-100 background-none'/>
+                  <img src={gemini} title="Google Gemini" className='invert brightness-100 background-none'/>
+                  <img src={meta} title="Facebook AI Similarity Search (FAISS)" className='invert brightness-100 background-none'/>
                 </div>
                 <hr className='w-[70vw] opacity-20'/>
                 <br/>
-                <h2 className='text-3xl'>Web and Software Development</h2>
+                <h2 className='text-lg xl:text-3xl'>Web and Software Development</h2>
                 <br/>
                 <h3>Frontend Technologies</h3>
-                <div className='flex flex-wrap gap-x-10 justify-center items-center  pt-2 gap-y-2  *:hover:scale-110 *:transition *:duration-100 *:flex *:flex-col *:items-center'>
-                  <img src={html} title="HTML" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src={css} title="CSS" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src={javascript} title="JavaScript" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src={typescript} title="TypeScript" className='brightness-0 invert background-none h-10 w-10'/>
+                <div className='flex flex-wrap gap-x-3 xl:gap-x-10 justify-center items-center  pt-4 gap-y-2  *:hover:scale-110 *:transition *:duration-100 *:flex *:flex-col *:items-center *:h-7 *:w-7 *:xl:h-10 *:xl:w-10'>
+                  <img src={html} title="HTML" className='brightness-0 invert background-none'/>
+                  <img src={css} title="CSS" className='brightness-0 invert background-none'/>
+                  <img src={javascript} title="JavaScript" className='brightness-0 invert background-none'/>
+                  <img src={typescript} title="TypeScript" className='brightness-0 invert background-none'/>
                 </div>
                 <br/>
                 <h3>Backend and Database Technologies</h3>
-                <div className='flex flex-wrap gap-x-10 justify-center items-center  pt-2 gap-y-2  *:hover:scale-110 *:transition *:duration-100'>
-                  <img src={expressjs} title="express.js" className='brightness-0 invert background-none h-10 w-10'/>
+                <div className='flex flex-wrap gap-x-3 xl:gap-x-10 justify-center items-center  pt-4 gap-y-2  *:hover:scale-110 *:transition *:duration-100 *:h-7 *:w-7  *:xl:h-10 *:xl:w-10'>
+                  <img src={expressjs} title="express.js" className='brightness-0 invert background-none'/>
                   <img src={nodejs} title="node.js" className='brightness-0 invert background-none h-10 w-10'/>
                   <img src={mongodb} title="MongoDB" className='brightness-0 invert background-none h-10 w-10'/>
                   <img src={mysql} title="mySQL" className='brightness-0 invert background-none h-10 w-10'/>
                 </div>
                 <br/>
                 <h3>Frameworks and Libraries</h3>
-                <div className='flex flex-wrap gap-x-10 justify-center items-center  pt-2 gap-y-2 *:hover:scale-110 *:transition *:duration-100 '>
+                <div className='flex flex-wrap gap-x-3 xl:gap-x-10 justify-center items-center  pt-4 gap-y-2 *:hover:scale-110 *:transition *:duration-100 *:h-7 *:w-7 *:xl:h-10 *:xl:w-10 '>
                   <img src={reactjs} title="React" className='brightness-0 invert background-none h-10 w-10'/>
                   <img src={nextjs} title="Next.js" className='brightness-0 invert background-none h-10 w-10'/>
                   <img src={fastapi} title="FastAPI" className='brightness-0 invert background-none h-10 w-10'/>
@@ -289,13 +290,13 @@ function App() {
                 <br/>
                 <hr className='w-[70vw] opacity-20'/>
                 <br/>
-                <h2 className='text-3xl'>Developer Tools</h2>
-                <div className='flex flex-wrap gap-x-10 justify-center items-center  pt-2 gap-y-2 *:hover:scale-110 *:transition *:duration-100 '>
-                  <img src={git} title="Git" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src={github} title="GitHub"className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src={vscode} title="Visual Studio Code" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src={vite} title="Vite" className='brightness-0 invert background-none h-10 w-10'/>
-                  <img src={figma} title="Figma" className='brightness-0 invert background-none h-10 w-10'/>
+                <h2 className='text-2xl xl:text-3xl'>Developer Tools</h2>
+                <div className='flex flex-wrap gap-x-3 xl:gap-x-10 justify-center items-center  pt-4 gap-y-2 *:hover:scale-110 *:transition *:duration-100 *:h-7 *:w-7 *:xl:w-10 *:xl:h-10'>
+                  <img src={git} title="Git" className='brightness-0 invert background-none'/>
+                  <img src={github} title="GitHub"className='brightness-0 invert background-none'/>
+                  <img src={vscode} title="Visual Studio Code" className='brightness-0 invert background-none'/>
+                  <img src={vite} title="Vite" className='brightness-0 invert background-none'/>
+                  <img src={figma} title="Figma" className='brightness-0 invert background-none'/>
                 </div>
               </div>
             <BorderBeam reverse size={140} duration={1000} colorFrom='white' colorTo="white" transition={{type: "spring",stiffness: 60, damping: 100}}/>                  
@@ -306,7 +307,7 @@ function App() {
         {/* Educational Qualifications */}
         <section className='backdrop-blur-sm mt-10! h-100 '>
           <h1 className="p-5 text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full backdrop-blur hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101">Educational Qualifications</h1>
-          <div className="p-10 flex grow items-center gap-x-10 justify-center  font-bold *:backdrop-blur-sm *:relative *:overflow-hidden *:hover:bg-black/20 *:text-2xl *:rounded-4xl *:w-[75vw] *:h-[25vh] *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20">
+          <div className="p-10 flex flex-col xl:flex-row  items-center gap-x-10 justify-center  font-bold *:backdrop-blur-sm *:relative *:overflow-hidden *:hover:bg-black/20 *:text-2xl *:rounded-4xl *:w-[75vw] *:h-[25vh] *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20">
             <div className='transition-all *:gap-x-0! duration-300 ease-in-out *:hover:gap-x-3!'>
               <div className=" columns-2 mx-10 duration-200 hover:gap-x-2">
                 <p>B.Tech CSE (AI/ML)<br/>VIT Chennai</p>
@@ -329,7 +330,7 @@ function App() {
 
         <section className=' mt-10! h-max p-10  '>
           <h1 className="p-5 text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101 animate-pulse ">Contact Me!</h1>
-          <div className="*:p-2 flex flex-col items-center align-middle gap-y-10 justify-center  font-bold *:backdrop-blur-sm *:relative *:overflow-hidden *:hover:bg-black/20 *:text-2xl *:rounded-xl *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20 *:duration-500">
+          <div className="*:p-2 flex flex-col items-center align-middle gap-y-10 justify-center  font-bold *:backdrop-blur-sm  *:hover:bg-black/20 *:text-2xl *:rounded-xl *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20 *:duration-500">
             <div>
               <Mail className="w-10! h-10!"/><a href="">piyushvarman</a>
             </div>
