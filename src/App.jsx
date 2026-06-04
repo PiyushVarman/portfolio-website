@@ -340,7 +340,7 @@ function App() {
           </div>
         </section>
 
-        <footer className="py-10 text-center text-xs xl:text-sm">
+        <footer className="py-10 text-center text-xs xl:text-sm ">
           Built by <a href="https://www.github.com/piyushvarman" className="underline">PCV</a>. The source code is available on <a href="https://github.com/" className='underline'>GitHub</a>
         </footer>
       </main>
