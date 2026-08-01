@@ -249,7 +249,7 @@ function App() {
             <div className="xl:mt-15.5! relative overflow-hidden flex flex-col gap-y-20 items-center backdrop-blur outline outline-white/20 h-max w-[80vw] p-10  rounded-xl hover:scale-110 duration-500 hover:shadow-xl hover:shadow-white/10">
               <div className='text-center'> 
                 <h2 className='text-2xl xl:text-3xl'>Programming Languages</h2>
-                <div className='flex flex-wrap justify-center gap-x-1 xl:gap-x-10 list-disc p-10 *:min-w-10! text-center *:flex *:flex-col *:items-center *:hover:scale-110 *:duration-100 *:h-7 *:w-7 *:xl:w-10 *:xl:h-10'>
+                <div className='flex flex-wrap justify-center gap-x-[0.5] xl:gap-x-10 list-disc p-10 *:min-w-10! text-center *:flex *:flex-col *:items-center *:hover:scale-110 *:duration-100 *:h-7 *:w-7 *:xl:w-10 *:xl:h-10'>
                   <img src={python} title="Python" className='invert brightness-100 background-none'/>
                   <img src={c} title="C" className='invert brightness-100 background-none'/>
                   <img src={cpp} title="C++" className='invert brightness-100 background-none'/>
