@@ -19,6 +19,7 @@ import python from './assets/logos/python.svg';
 import c from './assets/logos/c.svg';
 import cpp from './assets/logos/cplusplus.svg';
 import java from './assets/logos/Java.svg';
+import R from './assets/logos/R.svg';
 import langchain from './assets/logos/LangChain.svg';
 import gemini from './assets/logos/gemini.svg';
 import meta from './assets/logos/meta.svg';
@@ -38,9 +39,10 @@ import bootstrap from './assets/logos/bootstrap.svg';
 import git from './assets/logos/git.svg';
 import github from './assets/logos/github.svg';
 import vscode from './assets/logos/vscode.svg';
+import docker from './assets/logos/docker.svg';
 import vite from './assets/logos/vite.svg';
 import figma from './assets/logos/figma.svg';
-
+import googlegenai from './assets/logos/googlegenai.png';
 import os from './assets/os.mp4';
 import lexinote from './assets/lexinote.mp4';
 import f1regexpert from './assets/f1regexpert.mp4';
@@ -74,8 +76,8 @@ function App() {
         <a href="https://www.linkedin.com/in/piyush-varman" target="_blank"><img src={LinkedIn} className='w-6 xl:w-8 rounded duration-200 hover:shadow-xs hover:shadow-white'/></a>
         <a href="https://github.com/piyushvarman" target="_blank"><img src={GitHub} className='w-6 xl:w-9 rounded-3xl duration-200 hover:shadow-xs hover:shadow-white'/></a>
         <p className="p-5 text-white text-3xl xl:text-5xl font-bold  hover:text-shadow-white hover:text-amber-400 transition-all duration-500">PCV</p>
-        <a href="https://www.codechef.com/users/piyushvarman"target="_blank"><img src={CodeChef} className='w-6 xl:w-10'/></a>
         <a href="https://leetcode.com/u/pcv232/" target="_blank"><img src={LeetCode} className='w-6 xl:w-8 stroke-red-500 fill-red-500'/></a>
+        <a href="https://www.codechef.com/users/piyushvarman"target="_blank"><img src={CodeChef} className='w-6 xl:w-10'/></a>
       <ScrollProgress className="absolute bottom-0 h-[0.3vh]"/>
       </div>
 
@@ -86,8 +88,8 @@ function App() {
             <p className="gap-4 italic xl:text-2xl">Junior at VIT Chennai</p>
           </div>
           <div className='w-screen flex flex-col items-center xl:w-1/2'>
-            <motion.div initial={{opacity:0.5}} animate={{opacity:1}} transition={{duration:1 }}className='relative xl:h-[50vw] xl:h-[50vw] aspect-square overflow-clip xl:rounded-4xl'>
-              <img src={photo} className="w-full h-full hover:scale-130 bg-clip-content object-cover hover:rotate-5 transition duration-375"/>
+            <motion.div initial={{opacity:0.5}} animate={{opacity:1}} transition={{duration:1 }}className='relative xl:h-[50vw] xl:h-[50vw] aspect-square overflow-clip xl:rounded-4xl '>
+              <img src={photo} className="w-full h-full hover:scale-130! bg-clip-content object-cover hover:rotate-5 transition duration-5"/>
               <div className="absolute opacity-50 inset-0 xl:opacity-0 bg-radial from-transparent to-black/50"></div>
             </motion.div>
           </div>
@@ -174,7 +176,7 @@ function App() {
             </CardContainer>
             </BlurFade>
             </div>
-            
+
             <div className="inset-0 flex items-center justify-center ">
             <BlurFade inView={true} delay={0.1} inViewMargin='-10px' blur="100px">
             <CardContainer container ClassName="rounded-xl py-0 outline outline-red-500 bg-white ">
@@ -252,6 +254,7 @@ function App() {
                   <img src={c} title="C" className='invert brightness-100 background-none'/>
                   <img src={cpp} title="C++" className='invert brightness-100 background-none'/>
                   <img src={java} title="Java" className='brightness-0 invert background-none'/>
+                  <img src={R} title="R" className='brightness-0 invert background-none'/>
                 </div>
                 <hr className='w-[70vw] opacity-20'/>
                 <br/>
@@ -296,6 +299,7 @@ function App() {
                 <div className='flex flex-wrap gap-x-3 xl:gap-x-10 justify-center items-center  pt-4 gap-y-2 *:hover:scale-110 *:transition *:duration-100 *:h-7 *:w-7 *:xl:w-10 *:xl:h-10'>
                   <img src={git} title="Git" className='brightness-0 invert background-none'/>
                   <img src={github} title="GitHub"className='brightness-0 invert background-none'/>
+                  <img src={docker} title="Docker" className='brightness-0 invert background-none'/>
                   <img src={vscode} title="Visual Studio Code" className='brightness-0 invert background-none'/>
                   <img src={vite} title="Vite" className='brightness-0 invert background-none'/>
                   <img src={figma} title="Figma" className='brightness-0 invert background-none'/>
@@ -313,7 +317,7 @@ function App() {
             <div className='transition-all *:gap-x-0! duration-300 ease-in-out *:hover:gap-x-3!'>
               <div className="columns-2 mx-10 duration-200 hover:gap-x-2!">
                 <p>B.Tech CSE (AI/ML)<br/>VIT Chennai</p>
-                <p className='text-right'>8.80 CGPA<br/>2024-2028</p>
+                <p className='text-right'>8.84 CGPA<br/>2024-2028</p>
                 <BorderBeam size={100} duration={1000} colorFrom='white' colorTo="white" transition={{type: "spring",stiffness: 60, damping: 100}}/>
               </div>
             </div>
@@ -330,14 +334,25 @@ function App() {
           </div>
         </section>
 
+        {/* Certifications  */}
+        <section className='flex flex-col items-center my-10! '>
+          <h1 className="p-5 text-3xl xl:text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101">Certifications</h1>
+            <div className="relative backdrop-blur-xs py-10 xl:h-[40vh] xl:w-[50vw] mt-10! flex flex-col gap-x-10 xl:flex-row items-center justify-center hover:shadow-xl hover:shadow-white/10 rounded-3xl outline hover:scale-110 outline-white/20 duration-500">
+              <a href="https://www.credly.com/badges/519d3ac8-58f0-4581-8400-b9dac198e801/public_url"  target="_blank"><img src={googlegenai} className='w-[15vw] '></img></a>
+              <a className="p-5 text-xl font-bold text-center hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101 flex flex-col items-center">Google Generative AI Leader</a>
+              <BorderBeam size={100} duration={1000} colorFrom='white' colorTo="white" transition={{type: "spring",stiffness: 60, damping: 100}}/>
+            </div>
+        </section>
+
+        {/* Contact Me */}
         <section className=''>
           <h1 className="p-5 text-3xl xl:text-5xl font-bold text-center  text-transparent bg-linear-to-b from-white to-black bg-clip-text mt-[10vh] rounded-full hover:text-shadow-sm hover:text-shadow-white/10 duration-450 hover:scale-101 animate-pulse ">Contact Me!</h1>
-          <div className="*:p-2 flex flex-col items-center align-middle gap-y-10 justify-center  font-bold *:backdrop-blur-sm  *:hover:bg-black/20 *:text-lg *:xl:text-2xl *:rounded-xl *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20 *:duration-500">
+          <div className="*:p-2 flex flex-col items-center align-middle gap-y-5 justify-center  font-bold *:backdrop-blur-sm  *:hover:bg-black/20 *:text-lg *:xl:text-2xl *:rounded-xl *:flex *:flex-row *:items-center *:justify-center *:gap-x-10  *:hover:scale-110 *:hover:shadow-xl *:hover:shadow-white/10 *:outline *:outline-white/20 *:duration-500">
             <div>
-              <Mail className="w-7 h-7 xl:w-10! xl:h-10!"/><a href="">piyushvarman</a>
+              <Mail className="w-7 h-7 xl:w-10! xl:h-10!"/><a href="mailto:varmanpiyush@gmail.com" >Email</a>
             </div>
             <div>
-              <img src={LinkedIn} className='w-7 h-7 xl:w-10 xl:h-10'/>Piyush Varman's LinkedIn
+              <img src={LinkedIn} className='w-7 h-7 xl:w-10 xl:h-10'/><a href="https://www.linkedin.com/in/piyush-varman" target="_blank">LinkedIn</a>
             </div>
           </div>
         </section>
